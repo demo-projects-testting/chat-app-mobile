@@ -19,6 +19,15 @@
       ],
       "screens/*": [
         "screens/*"
+      ],
+      "types/*": [
+        "types/*"
+      ],
+      "constants/*": [
+        "constants/*"
+      ],
+      "services/*": [
+        "services/*"
       ]
     }
   },
@@ -30,6 +39,7 @@
   ],
   "extends": "expo/tsconfig.base",
   "typeRoots": [
-    "env.d.ts"
+    "env.d.ts",
+    "types/*"
   ]
 }

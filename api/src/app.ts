@@ -2,6 +2,7 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import express from 'express';
 import passport from 'passport';
+import { authenticateRoutes } from 'routes/index';
 
 const app = express();
 
@@ -13,11 +14,6 @@ app.use(cors());
 
 app.use(passport.initialize());
 
-app.get('/api', (req, res) => {
-  res.json({
-    success: true,
-    message: 'Hellow World'
-  });
-});
+app.use('/api/authenticate', authenticateRoutes);
 
 export default app;

@@ -1,19 +1,21 @@
+import { defaultStyles } from 'assets/styles';
 import StackNavigator from 'components/stackNavigator';
-import { StyleSheet } from 'react-native';
+import { View } from 'react-native';
+
+import { createTheme, ThemeProvider } from '@rneui/themed';
+
+const theme = createTheme({
+  lightColors: {
+    primary: defaultStyles.primaryColor
+  }
+});
 
 export default function App() {
   return (
-    <>
-      <StackNavigator />
-    </>
+    <View style={{ flex: 1, backgroundColor: defaultStyles.whiteColor }}>
+      <ThemeProvider theme={theme}>
+        <StackNavigator />
+      </ThemeProvider>
+    </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
-});
