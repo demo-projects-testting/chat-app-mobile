@@ -16,7 +16,7 @@ app.use(passport.initialize());
 app.get('/api', (req, res) => {
   res.json({
     success: true,
-    message: 'Hello World, I am testing deploy nodejs server'
+    message: 'Hello World'
   });
 });
 
