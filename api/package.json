@@ -26,6 +26,6 @@
   "scripts": {
     "dev": "nodemon",
     "build": "tsc",
-    "start": "ts-node -r tsconfig-paths/register build/index.js"
+    "start": "PORT=8080 ts-node -r tsconfig-paths/register build/index.js"
   }
 }
