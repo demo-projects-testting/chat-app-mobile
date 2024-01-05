@@ -1,6 +1,9 @@
 name: deploy-chat-app-server
 run-name: ${{ github.actor }} is deploying chat app server
-on: [ push ]
+on:
+  push:
+    branches:
+      - deploy
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
